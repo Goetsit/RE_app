@@ -1,12 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script type="text/javascript" src="vendors/angular.js"></script>
+    <script type="text/javascript" src="vendors/angular-route.min.js"></script>
+    <script type="text/javascript" src="scripts/client.js"></script>
+    <script type="text/javascript" src="scripts/controllers/rentController.js"></script>
+    <script type="text/javascript" src="scripts/controllers/saleController.js"></script>   
     <title>Weekend 5</title>
 </head>
-<body>
-    
+
+<body ng-app="myApp">
+    <div class="container">
+        <h2>Real Estate Things</h2>
+        <a href="/#!/rent">Houses For Rent</a>
+        <a href="/#!/sale">Houses For Sale</a>
+        <main ng-view>
+
+        </main>
+    </div>
 </body>
+
 </html>
