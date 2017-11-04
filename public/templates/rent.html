@@ -1,7 +1,15 @@
 <div id="rentals">
     <h2>Rentals</h2>
-    <div class="homesRent" >
+    <div class="homesRent" ng-repeat="rentals in rent.rentals">
 
+        <div>
+            <ul>
+                <li>Rent: {{rentals.rent}}</li>
+                <li>SquareFootage: {{rentals.sqft}}</li>
+                <li>City: {{rentals.city}}</li>
+
+            </ul>
+        </div>
     </div>
 
 </div>
