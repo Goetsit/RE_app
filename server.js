@@ -2,11 +2,12 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var port = process.env.PORT || 5000;
+var rentals = require('./routes/rentalListing.js');
 
 app.use(bodyParser.json()); 
 app.use(express.static('public'));
 
-
+app.use('/rent', rentals);
 
 var mongoose = require('mongoose');
 
