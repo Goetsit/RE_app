@@ -1,4 +1,14 @@
 <div id="sales">
         <h2>For Sale</h2>
-        <div class="homesSale" >
+        <div class="homesSale" ng-repeat="sales in sale.sales" >
+
+                <div>
+                        <ul>
+                            <li>Cost: {{sales.cost}}</li>
+                            <li>SquareFootage: {{sales.sqft}}</li>
+                            <li>City: {{sales.city}}</li>
+            
+                        </ul>
+                    </div>
+                </div>
     </div>
