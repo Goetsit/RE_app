@@ -10,7 +10,6 @@ var Sale = mongoose.model('Sale', SaleSchema, 'listings');
 
 // GET Route
 router.get('/', function(req, res){
-    
     Sale.find({}, function (err, foundSales) {
         if (err) {
             console.log("ERROR! : ", err);
@@ -21,5 +20,20 @@ router.get('/', function(req, res){
     }); // END FIND
 });
 
+
+//POST Route
+
+router.post('/', function(req, res) {
+    console.log(req.body);
+    var saleToAdd = new Sale(req.body);
+    saleToAdd.save(function(err, data){
+        if(err) {
+            console.log(err);
+            res.sendStatus(500);
+        } else {
+            res.sendStatus(201);
+        }
+    }); // END SAVE
+}); // END POST Route
 
 module.exports = router;
