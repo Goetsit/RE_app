@@ -8,4 +8,4 @@
 
 [x] 2 routes, each with a controller and template file. One set for "For Rent" properties and another set for "For Sale" properties
 
-[] Create an interface for adding additional rental or housing properties to the collection(s). You will need to give the user an option for either a Rent property, or a Sale property
+[x] Create an interface for adding additional rental or housing properties to the collection(s). You will need to give the user an option for either a Rent property, or a Sale property
