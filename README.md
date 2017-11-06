@@ -2,7 +2,7 @@
 
 
 
-# Name of Application
+# RealEstate App
 
 This application is built using the full MEAN stack.
 Users can add a rent/cost for a house, the city and square footage.
