@@ -22,4 +22,21 @@ router.get('/', function(req, res){
 });
 
 
+//POST Route
+
+router.post('/', function(req, res) {
+    console.log(req.body);
+    var rentalToAdd = new House(req.body);
+    // Mongoose does an insert that is wrapped in a function
+    // called save.
+    rentalToAdd.save(function(err, data){
+        if(err) {
+            console.log(err);
+            res.sendStatus(500);
+        } else {
+            res.sendStatus(201);
+        }
+    }); // END SAVE
+}); // END POST Route
+
 module.exports = router;
