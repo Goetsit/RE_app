@@ -1,5 +1,26 @@
 # RE_app
 
+
+
+# Name of Application
+
+This application is built using the full MEAN stack.
+Users can add a rent/cost for a house, the city and square footage.
+This info is stored using MongoDB and it reflected on the DOM after being entered
+
+## Built With
+
+Technologies used:
+
+- AngularJs 1.6
+
+- Express
+
+- NodeJs
+
+- Mongoose/MongoDB
+
+
 [x] Create a Full Stack application from the ground up using Angular, Node, Express, and MongoDB
 
 [x] Work with the data set that we have provide for you
