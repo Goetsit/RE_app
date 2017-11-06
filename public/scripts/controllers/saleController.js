@@ -4,6 +4,7 @@ myApp.controller('saleController', ['$http', function($http){
 
     var vm = this;
     var sales=[];
+    var newSale = {};
 
     vm.getSales = function(){
         $http.get('/sale').then(function (response) {
@@ -15,6 +16,16 @@ myApp.controller('saleController', ['$http', function($http){
         });
     }
     vm.getSales();
+
+    vm.newSale = function(newS){
+        console.log('sale button clicked', newS);
+        $http.post('/sale', newS).then(function(reposnse){
+            console.log('POST on /sale succesful');
+            vm.getSales();
+        }).catch(function(error){
+            console.log('failure on post /sale')
+        })
+    }
 
 }]);
 
