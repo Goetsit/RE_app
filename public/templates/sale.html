@@ -1,14 +1,22 @@
 <div id="sales">
-        <h2>For Sale</h2>
-        <div class="homesSale" ng-repeat="sales in sale.sales" >
+    <h3>Add a new home:</h3>
+    <form ng-submit="sale.newSale(sale.newS)">
+            Cost: <input type="text" ng-model="sale.newS.cost" id="costSale" placeholder="ex: 345000"><br>
+            Square Footage: <input type="text" ng-model="sale.newS.sqft" id="sqftSale" placeholder="ex: 2500"><br>
+            City: <input type="text" ng-model="sale.newS.city" id="citySale" placeholder="ex: Minneapolis"><br>
+            <button type="submit" >Submit New House For Sale</button>
+        </form>
+        <h2>Currently Listed For Sale</h2>
 
-                <div>
-                        <ul>
-                            <li>Cost: {{sales.cost}}</li>
-                            <li>SquareFootage: {{sales.sqft}}</li>
-                            <li>City: {{sales.city}}</li>
-            
-                        </ul>
-                    </div>
-                </div>
+    <div class="homesSale" ng-repeat="sales in sale.sales">
+
+        <div>
+            <ul>
+                <li>Cost: {{sales.cost}}</li>
+                <li>Square Footage: {{sales.sqft}}</li>
+                <li>City: {{sales.city}}</li>
+
+            </ul>
+        </div>
     </div>
+</div>
