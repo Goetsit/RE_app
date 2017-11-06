@@ -1,4 +1,11 @@
 <div id="rentals">
+        <h3>Add a new home:</h3>
+        <form ng-submit="rent.newRental(rent.newR)">
+        Rent: <input type="text" ng-model="rent.newR.rent" id="rentRental" placeholder="ex: 1275"><br>
+        Square Footage: <input type="text" ng-model="rent.newR.sqft" id="sqftRental" placeholder="ex: 2500"><br>
+        City: <input type="text" ng-model="rent.newR.city" id="cityRental" placeholder="ex: Minneapolis"><br>
+        <button type="submit" >Submit New House For Rent</button>
+    </form>
     <h2>Rentals</h2>
     <div class="homesRent" ng-repeat="rentals in rent.rentals">
 
